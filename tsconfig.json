@@ -36,6 +36,7 @@
   "include": [
     "src",
     "./*.d.ts",
+    ".content-collections/generated/**/*",
     "./*.config.ts",
     "content-collections.ts"
   ]
