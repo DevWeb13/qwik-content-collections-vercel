@@ -38,14 +38,14 @@ export default component$(() => {
               | JSXNode<unknown>
               | null
               | undefined;
-            html: string | undefined;
+            html?: string;
           }) => (
             <>
               <li key={post._meta.path}>
                 <h3>{post.title}</h3>
                 <p>{post.summary}</p>
               </li>
-              <div dangerouslySetInnerHTML={post.html} />
+              {post.html && <div dangerouslySetInnerHTML={post.html} />}
             </>
           )
         )}
