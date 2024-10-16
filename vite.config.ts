@@ -23,7 +23,7 @@ errorOnDuplicatesPkgDeps(devDependencies, dependencies);
  */
 export default defineConfig(({ command, mode }): UserConfig => {
   return {
-    plugins: [qwikCity(), qwikVite(), tsconfigPaths(), contentCollections()],
+    plugins: [contentCollections(), qwikCity(), qwikVite(), tsconfigPaths()],
     resolve: {
       alias: {
         '~': '/src',
